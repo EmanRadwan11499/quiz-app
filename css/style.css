@@ -1,0 +1,182 @@
+/* start of General Styling */
+:root {
+  --darkPrimary: #27374d;
+  --primary: #9db2bf;
+  --textColor: #1b2736;
+  --titleColor: #074a93;
+}
+body {
+  font-family: "Rubik", sans-serif;
+  background-image: url(../imgs/quizBg.svg);
+  color: var(--textColor) !important;
+}
+/* end of General Styling */
+
+/* start of utilities */
+.rightAns {
+  background-color: green !important;
+  color: white !important;
+  border: 2px solid transparent;
+}
+.wrongAns {
+  background-color: rgb(151, 6, 6) !important;
+  color: white !important;
+  border: 2px solid transparent;
+}
+/* end of utilities */
+
+/* start of common styles */
+.qusetionInfo h2 span,
+h2,
+.score span,
+.timer i {
+  color: var(--titleColor);
+}
+
+.FormContainer,
+.QuestionDetails,
+.quizContainer {
+  padding: 30px 10px;
+}
+
+.btn:hover,
+ul > li:hover,
+.quizContainer {
+  background-color: var(--darkPrimary) !important;
+}
+
+h1:after,
+.line,
+.bottomLine,
+.FormContainer,
+.QuestionDetails {
+  background-color: var(--primary);
+}
+/* end of common styles */
+
+/* start of main section */
+/* 1. start of quiz form */
+input::-webkit-input-placeholder {
+  color: var(--textColor) !important;
+}
+input::-moz-placeholder {
+  color: var(--textColor) !important;
+}
+input:-ms-input-placeholder {
+  color: var(--textColor) !important;
+}
+input::-ms-input-placeholder {
+  color: var(--textColor) !important;
+}
+input::placeholder,
+.form-select {
+  color: var(--textColor) !important;
+}
+
+.FormContainer {
+  min-height: 400px;
+}
+/* end of quiz form */
+
+/* 2. start of quiz Questions section */
+#quizSec {
+  padding: 20px 0;
+}
+h1 {
+  color: var(--primary);
+  font-size: calc(2rem + 0.7vw);
+}
+
+h1:after,
+.line,
+.bottomLine {
+  height: 2px;
+}
+
+h1::after {
+  content: "";
+  display: block;
+  margin: 10px auto;
+  width: 30%;
+}
+
+.bottomLine {
+  margin: 2px auto;
+  width: 20%;
+}
+
+.line {
+  margin: 10px auto;
+  width: 10%;
+}
+
+h2 {
+  font-size: calc(1.2rem + 0.2vw);
+}
+
+.question {
+  font-size: 1.2rem;
+}
+
+ul > li {
+  border: 2px solid var(--darkPrimary);
+  padding: 10px;
+  -webkit-transition: background-color 500ms, border 500ms, color 300ms;
+  -o-transition: background-color 500ms, border 500ms, color 300ms;
+  transition: background-color 500ms, border 500ms, color 300ms;
+  cursor: pointer;
+  width: calc(100% / 2 - 10px);
+}
+
+ul > li:hover {
+  color: white;
+}
+
+.count {
+  color: rgb(151, 6, 6) !important;
+}
+
+.btn {
+  background-color: var(--titleColor) !important;
+  -webkit-transition: background-color 500ms !important;
+  -o-transition: background-color 500ms !important;
+  transition: background-color 500ms !important;
+}
+
+.btn {
+  border: 2px solid transparent;
+  -webkit-transition: border 500ms;
+  -o-transition: border 500ms;
+  transition: border 500ms;
+}
+
+.questionContainer {
+  min-height: 300px;
+}
+
+@media screen and (min-width: 576px) {
+  .FormContainer,
+  .QuestionDetails,
+  .quizContainer {
+    padding: 30px 10px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .FormContainer,
+  .QuestionDetails,
+  .quizContainer {
+    padding: 30px 30px;
+  }
+
+  .timer {
+    text-align: end;
+  }
+}
+@media screen and (min-width: 992px) {
+  .FormContainer,
+  .QuestionDetails {
+    width: 80%;
+  }
+}
+/* end of quiz Questions section */
+/* end of main section */

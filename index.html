@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Metas tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- website title -->
+    <title>Quiz App</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- animate.css library CDN link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- Fontawsome Link -->
+    <link rel="stylesheet" href="/css/all.min.css" />
+    <!-- Bootstrap CSS Link -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <!-- Main CSS Link -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- start of the ui of the quiz app -->
+    <main id="quizSec" class="vh-100">
+      <div class="container-md">
+        <div class="quizContainer rounded-3 shadow-lg">
+          <h1 class="text-center text-capitalize">Quiz App</h1>
+          <div class="bottomLine"></div>
+          <div class="line mb-4"></div>
+
+          <!-- start of quiz options form -->
+          <section class="FormContainer py-3 mx-auto rounded-3">
+            <h2 class="text-center my-4">Choose The Quiz Options</h2>
+            <form method="post" id="QuizForm" class="my-5">
+              <div class="mb-4">
+                <input
+                  type="number"
+                  name="questionCount"
+                  class="form-control qesCount"
+                  min="1"
+                  max="50"
+                  placeholder="Enter Questions Count"
+                />
+                <p class="text-danger fw-semibold ms-2 mt-2 d-none warning">
+                  This Field is Required
+                </p>
+              </div>
+              <div class="mb-4">
+                <select
+                  name="category"
+                  id="category"
+                  class="form-select category"
+                >
+                  <option selected disabled>Select Category</option>
+                  <option value="9">General Knowledge</option>
+                  <option value="17">Science & Nature</option>
+                  <option value="23">History</option>
+                  <option value="22">Geography</option>
+                </select>
+                <p class="text-danger fw-semibold ms-2 mt-2 d-none warning">
+                  This Field is Required
+                </p>
+              </div>
+              <div class="mb-4">
+                <select
+                  name="difficulty"
+                  id="difficulty"
+                  class="form-select difficulty"
+                >
+                  <option selected disabled>Choose The Difficulty</option>
+                  <option value="easy">Easy</option>
+                  <option value="medium">Medium</option>
+                  <option value="hard">Hard</option>
+                </select>
+                <p class="text-danger fw-semibold ms-2 mt-2 d-none warning">
+                  This Field is Required
+                </p>
+              </div>
+              <div class="mb-3">
+                <button
+                  class="startQuiz btn text-light fw-medium d-block my-4 w-100 shadow-lg"
+                  type="submit"
+                >
+                  Start Quiz
+                </button>
+              </div>
+            </form>
+          </section>
+          <!-- end of quiz options form -->
+
+          <!-- start of quiz container -->
+          <section
+            class="QuestionDetails mx-auto rounded-3 animate__animated animate__bounceInRight d-none"
+          >
+            <div class="timer fw-semibold fs-5 w-100 mb-3">
+              <i class="fa-solid fa-stopwatch-20 fs-4 me-2"></i>
+              <span></span>
+            </div>
+            <div class="QuestionContent"></div>
+          </section>
+        </div>
+      </div>
+    </main>
+    <!-- end of the ui of the quiz app -->
+
+    <!-- Boostrap js Link -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <!-- Main js Link -->
+    <script src="./js/main.js" type="module"></script>
+  </body>
+</html>
